@@ -1,0 +1,33 @@
+POST http://localhost:3333/tienda/registro-animales
+Content-Type: application/json
+
+{
+    "codigo_animal": 4,
+    "nombre_animal": "Mono",
+    "especie": 10,
+    "raza": 2,
+    "genero": 1,
+    "edad": 5
+}
+
+//GET http://localhost:3333/tienda/lista-animales
+
+//GET http://localhost:3333/tienda/filtrar-animales?search=
+
+//GET http://localhost:3333/tienda/filtrar-animales?search=10
+
+//GET http://localhost:3333/tienda/filtrar-animales-edad
+
+# PUT http://localhost:3333/tienda/modificar-animales/1
+# Content-Type: application/json
+
+# {
+#     "nombre": "perro",
+#     "especie": 11,
+#     "raza": 1,
+#     "genero": 2,
+#     "edad": 10
+# }
+
+//DELETE http://localhost:3333/tienda/eliminar-animales/1
+
