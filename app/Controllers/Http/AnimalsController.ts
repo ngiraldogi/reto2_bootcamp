@@ -62,8 +62,8 @@ export default class AnimalsController {
     }
 
     private async getValidarAnimalExistente(codigo_animal: Number): Promise<Number>{
-        const total = await Animal.query().where({'codigo_animal': codigo_animal}).count('*').from('animals');
-        console.log(parseInt(total[0].$extras['count(*)']));
-        return parseInt(total[0].$extras['count(*)'])
+        const total = await Animal.query().where({'codigo_animal': codigo_animal}).count('* as total').from('animals');
+        //console.log(parseInt(total[0].$extras['count(total)']));
+        return parseInt(total[0].$extras['total'])
     }
 }
